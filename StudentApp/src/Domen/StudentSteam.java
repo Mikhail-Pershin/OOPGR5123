@@ -3,7 +3,6 @@ package Domen;
 import java.util.Iterator;
 import java.util.List;
 
-
 public class StudentSteam implements Iterable<StudentGroup> {
     private List<StudentGroup> steam;
     private Integer idSteam;
@@ -11,12 +10,12 @@ public class StudentSteam implements Iterable<StudentGroup> {
     /**
      * Конструктор - создание нового объекта с определенными значениями
      * 
-     * @param stream            - поток
-     * @param idStream         - id-потока
+     * @param stream   - поток
+     * @param idStream - id-потока
      * @see StudentSteam#StudentSteam()
      */
     public StudentSteam(List<StudentGroup> stream, Integer idSteam, List<StudentGroup> list) {
-      this.steam = steam;
+        this.steam = steam;
         this.idSteam = idSteam;
     }
 
