@@ -1,18 +1,18 @@
 package View;
 
-import Controller.Interfaces.iGetView;
-import Model.Core.Student;
-
 import java.util.List;
 import java.util.Scanner;
 
+import Controller.Interfaces.iGetView;
+import Model.Core.Student;
+
 public class ViewClassEng implements iGetView {
     @Override
-    public void printAllStudent(List<Student> students) {
+    public void printAllStudent(List<Student> students3) {
         System.out.println("----------- List Students -----------");
-        for(Student s : students)
+        for(Student s3 : students3)
         {
-            System.out.println(s);
+            System.out.println(s3);
         }
         System.out.println("----------------------------------------");
     }

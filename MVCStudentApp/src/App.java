@@ -17,6 +17,7 @@ public class App {
         List<Student> students = new ArrayList<>();
         List<Student> students1 = new ArrayList<>();
         List<Student> students2 = new ArrayList<>();
+        List<Student> students3 = new ArrayList<>();
         Student s1 = new Student("Сергей", 21, 0);
         Student s2 = new Student("Андрей", 25, 0);
         Student s3 = new Student("Иван", 23, 0);
@@ -24,6 +25,8 @@ public class App {
         Student s5 = new Student("Света", 22, 0);
         Student s6 = new Student("Игорь", 21, 0);
         Student s7 = new Student("Мария", 21, 0);
+        Student s8 = new Student("Семен", 21, 0);
+        Student s9 = new Student("Марина", 21, 0);
         students.add(s1);
         students.add(s2);
         students1.add(s3);
@@ -31,26 +34,27 @@ public class App {
         students2.add(s5);
         students2.add(s6);
         students2.add(s7);
+        students3.add(s8);
+        students3.add(s9);
 
         ModelClassFile fModel = new ModelClassFile("StudentDB.csv");
         fModel.saveAllStudentToFile(students);
 
         ModelClassHash modelClassHash = new ModelClassHash(students1);
         ModelClassList modelClassList = new ModelClassList(students2);
-        //ViewClass view = new ViewClass();
+        // ViewClass view = new ViewClass();
 
-        List <iGetModel> modelList = new ArrayList<>();
+        List<iGetModel> modelList = new ArrayList<>();
         modelList.add(fModel);
         modelList.add(modelClassHash);
         modelList.add(modelClassList);
         ControllerModel controllerModel = new ControllerModel(modelList);
         iGetView view = new ViewClass();
 
-       ControllerClass controller = new ControllerClass(controllerModel,view);
+        ControllerClass controller = new ControllerClass(controllerModel, view);
 
-    //    controller.update();
-       controller.run();
-
+        // controller.update();
+        controller.run();
 
     }
 }
